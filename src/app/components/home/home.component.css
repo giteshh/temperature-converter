@@ -1,0 +1,78 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/*drag and drop box style section*/
+.example-box {
+  width: 420px;
+  padding-top: 25px;
+  border-top: 2px solid red;
+  color: rgba(0, 0, 0, 0.87);
+  cursor: move;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 4px;
+  position: relative;
+  z-index: 1;
+  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.3),
+  0 2px 2px 0 rgba(0, 0, 0, 0.14),
+  0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.example-box:active {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.5),
+  0 8px 10px 1px rgba(0, 0, 0, 0.14),
+  0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+/*drag and drop box style section end*/
+.mat-headline {
+  letter-spacing: 2px;
+}
+
+input {
+  margin-bottom: 15px;
+  width: 100px;
+  padding-bottom: 8px;
+  padding-top: 12px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 10px;
+  padding-bottom: 8px;
+  padding-top: 2px;
+}
+
+.horizontalLine {
+  width: 350px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+  .example-box {
+    width: 280px;
+  }
+
+  .horizontalLine {
+    width: 240px;
+  }
+}

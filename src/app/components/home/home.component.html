@@ -1,0 +1,27 @@
+<div class="main">
+  <!--  drag and drop card start-->
+  <div class="example-box" cdkDrag mat-card-avatar color="accent">
+    <h1 class="mat-headline">Temperature Converter</h1>
+    <hr class="horizontalLine">
+    <div>
+      <div class="form-section">
+        <section>
+          <label>
+            <sup>o</sup>C
+          </label>
+          <input [(ngModel)]="degC" (ngModelChange)="toFahrenheit($event)" type="number">
+        </section>
+        <section>
+          <label>
+            <sup>o</sup>F
+          </label>
+          <input [(ngModel)]="degF" (ngModelChange)="toCelsius($event)" type="number">
+        </section>
+      </div>
+    </div>
+    <hr class="horizontalLine">
+    <p>You can drag me anywhere.</p>
+  </div>
+  <!--  drag and drop card end-->
+</div>
+
