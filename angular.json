@@ -35,7 +35,6 @@
                 "bundleName": "dark-theme",
                 "inject": false
               }
-
             ],
             "scripts": []
           },
@@ -106,9 +105,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "Temperature-converter"
+  "defaultProject": "Temperature-converter",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
