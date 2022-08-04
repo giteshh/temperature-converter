@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "dist/temperature-converter",
     "ignore": [
       "firebase.json",
       "**/.*",
