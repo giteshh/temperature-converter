@@ -72,6 +72,18 @@ section {
   color: darkgray;
 }
 
+.formDiv {
+  cursor: pointer;
+}
+
+.example-handle {
+  cursor: move;
+}
+
+.example-box {
+  cursor: default;
+}
+
 @media only screen and (max-width: 600px) {
   .example-box {
     width: 280px;

@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {FormGroup} from "@angular/forms";
+import {UntypedFormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-home',
@@ -11,7 +11,7 @@ export class HomeComponent {
   constructor() {
   }
 
-  formGroup: FormGroup | undefined;
+  formGroup: UntypedFormGroup | undefined;
   degF: number | undefined;
   degC: number | undefined;
 
