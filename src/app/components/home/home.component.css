@@ -72,10 +72,6 @@ section {
   color: darkgray;
 }
 
-.formDiv {
-  cursor: pointer;
-}
-
 .example-handle {
   cursor: move;
 }
