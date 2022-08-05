@@ -12,6 +12,12 @@ import {MatOptionModule} from "@angular/material/core";
 import {MatSelectModule} from "@angular/material/select";
 import {AppRoutingModule} from "./app-routing.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {AngularFireModule} from "@angular/fire/compat";
+import {initializeApp, provideFirebaseApp} from "@angular/fire/app";
+import {getAnalytics, provideAnalytics} from "@angular/fire/analytics";
+import {environment} from "../environments/environment";
+import {getFirestore, provideFirestore} from "@angular/fire/firestore";
+import {getPerformance, providePerformance} from "@angular/fire/performance";
 
 @NgModule({
   declarations: [
@@ -30,7 +36,13 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     DragDropModule,
     MatInputModule,
     MatOptionModule,
-    MatSelectModule
+    MatSelectModule,
+    // firebase
+    AngularFireModule.initializeApp(environment.firebase),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAnalytics(() => getAnalytics()),
+    provideFirestore(() => getFirestore()),
+    providePerformance(() => getPerformance()),
   ],
   exports: [
     FormsModule, ReactiveFormsModule,
