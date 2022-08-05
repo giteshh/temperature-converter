@@ -1,7 +1,12 @@
 <div class="main">
   <!--  drag and drop card start-->
   <div class="example-box" cdkDrag mat-card-avatar color="accent">
-    <h1 class="mat-headline">Temperature Converter</h1>
+<!--    drag by clicking on title-->
+    <div class="example-handle" cdkDragHandle>
+      <h1 class="mat-headline">Temperature Converter</h1>
+    </div>
+<!--    drag by clicking title section ends-->
+
     <hr class="horizontalLine">
     <div>
       <div class="form-section">
@@ -20,7 +25,7 @@
       </div>
     </div>
     <hr class="horizontalLine">
-    <p>You can drag me anywhere.</p>
+    <p>Click and hold title to drag.</p>
   </div>
   <!--  drag and drop card end-->
 </div>
